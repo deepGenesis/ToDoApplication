@@ -1,0 +1,12 @@
+
+    .delete_modal .modal-header {
+        color: #ff0000;
+    }
+    
+    .delete_modal h5 {
+        font-size: 16px;
+    }
+    
+    .delete_modal .modal-body button {
+        margin: 2%;
+    }

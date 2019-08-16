@@ -1,0 +1,9 @@
+<div class="container">
+    <hr>
+    <button class="btn fa fa-power-off" [ngClass]="buttonClass" (click)="toggle()" >{{buttonText}}</button>
+    <ng-container *ngIf="show">
+    <hr>
+    <app-todo-item></app-todo-item>
+    <app-main></app-main>
+    </ng-container>
+</div>

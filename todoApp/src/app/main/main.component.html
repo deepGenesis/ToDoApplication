@@ -1,0 +1,50 @@
+<!-- <div class="table-responsive">
+  
+        <table class="table">
+            <thead class="black white-text">
+              <tr>
+                <th scope="col"><i class="fa fa-trash" (click)="deleteMultiple()"></i></th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Time</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of items | paginate:{itemsPerPage: 5, currentPage:p}; let i = index;">
+                  <td>
+                      <div class="checkbox">
+                          <input type="checkbox" [(ngModel)]="items[i].checkState" name="check+item.id">
+                      </div>
+                  </td>
+                  <td>{{item.title}}</td>
+                  <td>{{item.description}}</td>
+                  <td>{{item.time}}</td>
+                  <td><i class="fa fa-edit" (click)="openEditTodo(item)"></i><i class="fa fa-trash" (click)="openDeleteTodo(item)"></i></td>
+              </tr>
+            </tbody>
+            
+          </table>
+          <pagination-controls (pageChange)="p=$event"></pagination-controls>
+        </div> -->
+        <div class="container cardContainer">
+          <div class="row">            
+              <div class="col-md-3" *ngFor="let item of items  let i = index;">
+                <div [ngClass]="cardClass">                 
+                  <div style="float: left">
+                      <img class="card-img-top" src="../../assets/images/todo_icon.png" alt="Card image cap">
+                      <input type="checkbox" [(ngModel)]="item.checkState" style="margin-left: 60%" (change)="checkAllOrNot()">
+                </div>  
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{item.time}}</h6>
+                    <p class="card-text">{{item.description}}</p>
+                    <button class="btn fa fa-edit" (click)="openEditTodo(item)"></button>
+                    <button class="btn fa fa-trash" (click)="openDeleteTodo(item,i)"></button>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+        </div>
+            

@@ -1,0 +1,16 @@
+<div class="delete_modal">
+    <div class="modal-header">
+        <h5 class="modal-title error-head" id="modal-basic-title" >{{error_title}}</h5>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <h6 *ngFor="let m of error_message">{{m}}</h6>
+        <div class="form-group">
+            <div class="text-center">
+                <button type="button" class="btn btn-outline-danger" (click)="activeModal.dismiss('Cross click')">OK</button>
+            </div>
+        </div>  
+    </div>        
+</div>

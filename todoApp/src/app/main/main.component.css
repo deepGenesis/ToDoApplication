@@ -1,0 +1,40 @@
+    i{
+        margin: 10px;
+    }
+    .fa-edit{
+        color: blue;
+    }
+    .fa-trash{
+        color: red;
+    }
+    .card-img-top{
+        width: 20%;
+    margin-top: 4%;
+    }
+    .card{
+        background-color: #b9bebf6b;
+        margin-bottom: 10%;
+        border: 1px;
+        text-align: center;
+    }
+    .main-div{
+        text-align: center;
+        background-color: aquamarine;
+    }
+ 
+    p.card-text {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .card-body {
+        width: 100%;
+    }
+
+    .card.shadow-sm:hover {
+        box-shadow: 3px 3px 5px 2px #d95c52 !important;
+        border-radius: 5px;
+        transition: .5s;
+    }
